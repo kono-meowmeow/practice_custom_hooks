@@ -5,13 +5,6 @@ import { UserCard } from './components/UserCard';
 import { User } from './types/api/user';
 import { UserProfile } from './types/userProfile';
 
-const user = {
-  id: 1,
-  name: "紫宮るな",
-  email:"aaa@aaa.com",
-  address: "https://vspo.jp/"
-};
-
 function App() {
   const [userProfiles, setUserProfiles] = useState<Array<UserProfile>>([]);
 
@@ -37,7 +30,6 @@ function App() {
       {userProfiles.map((user) => (
         <UserCard key={user.id} user={user} />
       ))}
-      <UserCard user={user} />
     </div>
   );
 }
